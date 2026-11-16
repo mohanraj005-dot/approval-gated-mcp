@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "approval-gated-mcp"
+version = "0.1.0"
+description = "Reference MCP server: an agent drafts outbound messages, a human approves the exact draft by fingerprint, only then does it send."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+authors = [{ name = "Mohan Raj Dhanapal" }]
+keywords = ["mcp", "ai-agents", "agent-safety", "human-in-the-loop", "approval"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.2"]
+dev = ["pytest>=8", "ruff>=0.5", "mcp>=1.2"]
+
+[project.scripts]
+agm = "approval_gated_mcp.cli:main"
+agm-server = "approval_gated_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
