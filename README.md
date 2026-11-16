@@ -103,7 +103,7 @@ never logged.
 Requires Python 3.11 or newer.
 
 ```bash
-git clone <this repo> && cd approval-gated-mcp
+git clone https://github.com/mohanraj005-dot/approval-gated-mcp.git && cd approval-gated-mcp
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"       # core has no dependencies; the [mcp] extra adds the MCP SDK
 
