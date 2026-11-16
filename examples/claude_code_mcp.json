@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "approval-gated-mcp": {
+      "type": "stdio",
+      "command": "/ABSOLUTE/PATH/TO/approval-gated-mcp/.venv/bin/agm-server",
+      "args": [],
+      "env": {
+        "AGM_HOME": "/ABSOLUTE/PATH/TO/approval-gated-mcp/.agm",
+        "AGM_OUTBOX": "/ABSOLUTE/PATH/TO/approval-gated-mcp/outbox"
+      }
+    }
+  }
+}

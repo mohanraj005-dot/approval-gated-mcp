@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "approval-gated-mcp": {
+      "command": "/ABSOLUTE/PATH/TO/approval-gated-mcp/.venv/bin/agm-server",
+      "env": {
+        "AGM_HOME": "/ABSOLUTE/PATH/TO/agm-state",
+        "AGM_OUTBOX": "/ABSOLUTE/PATH/TO/agm-outbox",
+        "AGM_FROM": "agent@example.com",
+        "AGM_RATE_LIMIT": "5"
+      }
+    }
+  }
+}
